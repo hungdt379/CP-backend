@@ -41,7 +41,7 @@ public class EmployeeController {
         return apiResponse.successResponse(employee, "Success", true);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<?> updateEmployee(@RequestBody Employee employee) {
         try {
             iEmployeeService.updateEmployee(employee);
@@ -51,7 +51,7 @@ public class EmployeeController {
         }
     }
 
-    @GetMapping("/delete")
+    @DeleteMapping("/delete")
     public ResponseEntity<?> deleteEmployee(@RequestParam int id) {
         try {
             iEmployeeService.deleteEmployee(id);
