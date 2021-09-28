@@ -57,7 +57,7 @@ public class EmployeeController {
             iEmployeeService.deleteEmployee(id);
             return apiResponse.successResponse(null, "Delete Employee successful", true);
         } catch (EmptyResultDataAccessException e) {
-            return apiResponse.errorResponse(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, false);
+            return apiResponse.errorResponse(e.getMessage(), HttpStatus.BAD_REQUEST, false);
         }
     }
 

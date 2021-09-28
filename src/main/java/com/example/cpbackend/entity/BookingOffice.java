@@ -26,6 +26,14 @@ public class BookingOffice {
     @JoinColumn(name = "trip_id")
     private Trip trip;
 
+    public Trip getTrip() {
+        return trip;
+    }
+
+    public void setTrip(Trip trip) {
+        this.trip = trip;
+    }
+
     public int getOfficeId() {
         return officeId;
     }
